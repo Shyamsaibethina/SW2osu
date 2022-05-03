@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.3" sequence="68" timestamp="1646882493241" analysisTimestamp="1646882492614" release="">
+  <Project projectName="ListWithRetreat">
+    <Jar>/Users/shyamsaibethina/Desktop/Software II/workspace/ListWithRetreat/bin/ListTest.class</Jar>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/workspace/ListWithRetreat/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.1.v20211116-1657/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/ListWithRetreat/test</SrcDir>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/ListWithRetreat/src</SrcDir>
+  </Project>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS" first="1" last="2" removedByChange="true">
+    <Class classname="List3$Node">
+      <SourceLine classname="List3$Node" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Class>
+    <Field classname="List3$Node" name="data" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="List3$Node" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Field>
+    <SourceLine classname="List3$Node" start="54" end="54" startBytecode="1" endBytecode="1" sourcefile="List3.java" sourcepath="List3.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS" first="1" last="1" removedByChange="true">
+    <Class classname="List3$Node">
+      <SourceLine classname="List3$Node" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Class>
+    <Field classname="List3$Node" name="next" signature="LList3$Node;" isStatic="false">
+      <SourceLine classname="List3$Node" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Field>
+    <SourceLine classname="List3$Node" start="60" end="60" startBytecode="1" endBytecode="1" sourcefile="List3.java" sourcepath="List3.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS" first="1" last="1" removedByChange="true">
+    <Class classname="List3$Node">
+      <SourceLine classname="List3$Node" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Class>
+    <Field classname="List3$Node" name="previous" signature="LList3$Node;" isStatic="false">
+      <SourceLine classname="List3$Node" sourcefile="List3.java" sourcepath="List3.java"/>
+    </Field>
+    <SourceLine classname="List3$Node" start="66" end="66" startBytecode="1" endBytecode="1" sourcefile="List3.java" sourcepath="List3.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 9 Mar 2022 22:21:32 -0500" total_classes="1" referenced_classes="18" total_bugs="0" total_size="317" num_packages="1" java_version="15.0.2" vm_version="15.0.2+7-27" cpu_seconds="1.17" clock_seconds="0.63" peak_mbytes="756.13" alloc_mbytes="2048.00" gc_seconds="0.00">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="317">
+      <ClassStats class="ListTest" sourceFile="ListTest.java" interface="false" size="317" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="180" invocations="2" avgMicrosecondsPerInvocation="90208" maxMicrosecondsPerInvocation="150222" standardDeviationMicrosecondsPerInvocation="60014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="75" invocations="364" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="4176" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="41" invocations="45" avgMicrosecondsPerInvocation="926" maxMicrosecondsPerInvocation="18171" standardDeviationMicrosecondsPerInvocation="2734"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="43" avgMicrosecondsPerInvocation="665" maxMicrosecondsPerInvocation="9635" standardDeviationMicrosecondsPerInvocation="1650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="53" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="4900" standardDeviationMicrosecondsPerInvocation="1089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="23" invocations="43" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="9767" standardDeviationMicrosecondsPerInvocation="1608"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="13" invocations="43" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="7328" standardDeviationMicrosecondsPerInvocation="1118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="11" invocations="43" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="3752" standardDeviationMicrosecondsPerInvocation="654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="11" invocations="104" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="2776" standardDeviationMicrosecondsPerInvocation="302"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1646754290282" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1646754290283" release="" codeSize="433" numClasses="5"/>
+    <AppVersion sequence="2" timestamp="1646756219129" release="" codeSize="171" numClasses="3"/>
+    <AppVersion sequence="3" timestamp="1646880236743" release="" codeSize="466" numClasses="4"/>
+    <AppVersion sequence="4" timestamp="1646880511967" release="" codeSize="80" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1646880550920" release="" codeSize="80" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1646880583721" release="" codeSize="296" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1646880635462" release="" codeSize="291" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1646880657913" release="" codeSize="296" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1646880718967" release="" codeSize="302" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1646880733940" release="" codeSize="303" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1646880798958" release="" codeSize="303" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1646880811065" release="" codeSize="303" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1646880815555" release="" codeSize="303" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1646880925706" release="" codeSize="311" numClasses="1"/>
+    <AppVersion sequence="15" timestamp="1646880950756" release="" codeSize="311" numClasses="1"/>
+    <AppVersion sequence="16" timestamp="1646881137478" release="" codeSize="312" numClasses="1"/>
+    <AppVersion sequence="17" timestamp="1646881209952" release="" codeSize="295" numClasses="1"/>
+    <AppVersion sequence="18" timestamp="1646881215175" release="" codeSize="295" numClasses="1"/>
+    <AppVersion sequence="19" timestamp="1646881234452" release="" codeSize="301" numClasses="1"/>
+    <AppVersion sequence="20" timestamp="1646881238458" release="" codeSize="297" numClasses="1"/>
+    <AppVersion sequence="21" timestamp="1646881246333" release="" codeSize="309" numClasses="1"/>
+    <AppVersion sequence="22" timestamp="1646881256526" release="" codeSize="309" numClasses="1"/>
+    <AppVersion sequence="23" timestamp="1646881260352" release="" codeSize="309" numClasses="1"/>
+    <AppVersion sequence="24" timestamp="1646881291018" release="" codeSize="317" numClasses="1"/>
+    <AppVersion sequence="25" timestamp="1646881329910" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="26" timestamp="1646881347854" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="27" timestamp="1646881374260" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="28" timestamp="1646881378381" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="29" timestamp="1646881391956" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="30" timestamp="1646881394356" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="31" timestamp="1646881663096" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="32" timestamp="1646881674281" release="" codeSize="317" numClasses="1"/>
+    <AppVersion sequence="33" timestamp="1646881769600" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="34" timestamp="1646881837119" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="35" timestamp="1646881864129" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="36" timestamp="1646881876614" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="37" timestamp="1646881901775" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="38" timestamp="1646881921735" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="39" timestamp="1646881964521" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="40" timestamp="1646881969540" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="41" timestamp="1646881981608" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="42" timestamp="1646881993652" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="43" timestamp="1646882005888" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="44" timestamp="1646882035481" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="45" timestamp="1646882038982" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="46" timestamp="1646882054038" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="47" timestamp="1646882101931" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="48" timestamp="1646882118643" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="49" timestamp="1646882135197" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="50" timestamp="1646882147243" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="51" timestamp="1646882155495" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="52" timestamp="1646882185006" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="53" timestamp="1646882195256" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="54" timestamp="1646882206448" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="55" timestamp="1646882242856" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="56" timestamp="1646882260678" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="57" timestamp="1646882264278" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="58" timestamp="1646882275067" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="59" timestamp="1646882277775" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="60" timestamp="1646882284338" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="61" timestamp="1646882293007" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="62" timestamp="1646882296853" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="63" timestamp="1646882338356" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="64" timestamp="1646882345453" release="" codeSize="177" numClasses="3"/>
+    <AppVersion sequence="65" timestamp="1646882357154" release="" codeSize="317" numClasses="1"/>
+    <AppVersion sequence="66" timestamp="1646882385351" release="" codeSize="317" numClasses="1"/>
+    <AppVersion sequence="67" timestamp="1646882492580" release="" codeSize="317" numClasses="1"/>
+  </History>
+</BugCollection>

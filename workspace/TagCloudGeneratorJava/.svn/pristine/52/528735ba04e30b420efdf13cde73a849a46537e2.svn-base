@@ -1,0 +1,284 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
+
+import components.simplewriter.SimpleWriter;
+import components.sortingmachine.SortingMachine;
+
+public class TagCloudGeneratorJava {
+
+    /**
+     * String for the list of possible separators (except for ").
+     */
+    private static final String SEPARATORSTRING = ". ,:;'{][}|/><?!`~1234567890"
+            + "@#$%^&*()-_=+\" ";
+
+    /**
+     * Returns a negative integer, zero, or a positive integer as the first
+     * argument is less than, equal to, or greater than the second.
+     *
+     */
+    private static class IntegerLT implements Comparator<String> {
+        //instance
+        private Map<String, Integer> compareMap;
+
+        public IntegerLT(Map<String, Integer> compareMap) {
+            this.compareMap = compareMap;
+        }
+
+        @Override
+        public int compare(String str1, String str2) {
+            int firstInt = this.compareMap.get(str1);
+            int secondInt = this.compareMap.get(str2);
+            if (secondInt > firstInt) {
+                return 1;
+            } else if (firstInt > secondInt) {
+                return -1;
+            } else {
+                return str2.compareTo(str1);
+            }
+        }
+    }
+
+    public static Map<String, Integer> readFile(BufferedReader input)
+            throws IOException {
+        assert input.ready() : "The input must be open";
+
+        Map<String, Integer> wordMap = new HashMap<String, Integer>();
+
+        String toBeAdded = "";
+        //use a try here because there may be an issue reading the line
+        try {
+            String line = input.readLine();
+
+            //if the line is null that means that file has reached its end.
+            while (line != null) {
+                line = line.toLowerCase();
+                //iterate through each character
+                for (int i = 0; i < line.length(); i++) {
+
+                    //if the character is not a separator add it to String toBeAdded
+                    if (!SEPARATORSTRING
+                            .contains(Character.toString(line.charAt(i)))) {
+
+                        toBeAdded += Character.toString(line.charAt(i));
+                    } else if (SEPARATORSTRING
+                            .contains(Character.toString(line.charAt(i)))) {
+
+                        //if wordMap has the word increment its corresponding value
+                        if (toBeAdded != "" && wordMap.containsKey(toBeAdded)) {
+                            int value = wordMap.get(toBeAdded);
+                            value++;
+                            wordMap.put(toBeAdded, value);
+                            //if the wordMap doesn't have it add it with value 1
+                        } else if (toBeAdded != ""
+                                && !wordMap.containsKey(toBeAdded)) {
+                            wordMap.put(toBeAdded, 1);
+                        }
+                        //reset toBeAdded to add more words
+                        toBeAdded = "";
+                    }
+                }
+                line = input.readLine();
+            }
+
+            //If a word proceeds with the end of file then we need to check
+            if (toBeAdded != "" && wordMap.containsKey(toBeAdded)) {
+                int value = wordMap.get(toBeAdded);
+                value++;
+                wordMap.put(toBeAdded, value);
+            } else if (toBeAdded != "" && !wordMap.containsKey(toBeAdded)) {
+                wordMap.put(toBeAdded, 1);
+            }
+
+        } catch (IOException a) {
+            System.err.print("Error opening reading from the file");
+        }
+
+        return wordMap;
+
+    }
+
+    public static TreeMap<String, Integer> sortMap(Map<String, Integer> map) {
+        IntegerLT c = new IntegerLT(map);
+
+        TreeMap<String, Integer> countSorted = new TreeMap<>(c);
+
+        Set<Map.Entry<String, Integer>> pairSet = map.entrySet();
+
+        while(pairSet.size()>0) {
+            pair
+        }
+
+        return countSorted;
+
+    }
+
+    /**
+     * Return a font size that corresponds to the given count of a word.
+     *
+     * @param oldValue,
+     *            the given count of a word in the text
+     * @param largest
+     *            the most counts within the sorting machine
+     * @param smallest
+     *            the least count within the sorting machine
+     * @return returns bit of html code that has a font size that corresponds
+     *
+     *         the count of the word in the text.
+     */
+    private static String fontSize(int oldValue, int largest, int smallest) {
+
+        int answer = (((oldValue - smallest) * (48 - 11))
+                / (largest - smallest)) + 11;
+
+        return "f" + answer;
+    }
+
+    /**
+     * Outputs the header for the index HTML file.
+     *
+     * @param out
+     *            The output file stream
+     * @param nWords
+     *            the number of words the user chose to have outputed
+     * @param fileName
+     *            The name of the file the user desired
+     * @requires out.is_open
+     * @ensures output file has the header for the index HTML file
+     */
+    public static void outputHeader(PrintWriter out, String fileName,
+            int nWords) throws IOException {
+        /*
+         * Outputs the beginning code of the index HTML file to the output file
+         * stream
+         */
+        out.println("<html>");
+        out.println("   <head>");
+        out.println("      <title>Top " + nWords + " words in " + fileName
+                + "</title>");
+        out.println(
+                "      <link href=\"http://web.cse.ohio-state.edu/software/2231"
+                        + "/web-sw2/assignments/projects/tag-cloud-generator/data/"
+                        + "tagcloud.css\" rel=\"stylesheet\" type=\"text/css\">");
+        out.println("      <link href=\"tagcloud.css\" rel=\"stylesheet\" "
+                + "type=\"text/css\">");
+        out.println("   </head>");
+        out.println("   <body>");
+        out.println(
+                "      <h2>Top " + nWords + " words in " + fileName + "</h2>");
+        out.println("      <hr>");
+        out.println("      <div class=\"cdiv\">");
+        out.println("         <p class=\"cbox\">");
+
+    }
+
+    /**
+     * Outputs the footer for the index HTML file.
+     *
+     * @param out
+     *            The output file stream
+     * @requires out.is_open
+     * @ensures output file has the closing braces for the index HTML file
+     */
+    public static void outputFooter(PrintWriter out) throws IOException {
+        /*
+         * Outputs the closing code of the index HTML file to the output file
+         * stream
+         */
+        out.println("         </p>");
+        out.println("      </div>");
+        out.println("   </body>");
+        out.print("</html>");
+    }
+
+    /**
+     * Outputs the words and corresponding counts to the table in the index HTML
+     * file.
+     *
+     * @param counts
+     *            The map of the words and their corresponding occurrences in
+     *            the input file.
+     * @param out
+     *            The output file stream
+     * @requires out.is_open
+     * @ensures output file has the code to output the table of words and counts
+     *          in the HTML file.
+     */
+    public static void outputCounts(
+            SortingMachine<Map.Pair<String, Integer>> wordsSorted,
+            SimpleWriter out) {
+
+        //gets the largest count
+        int largest = 0;
+        for (Map.Pair<String, Integer> temp : wordsSorted) {
+            if (temp.value() > largest) {
+                largest = temp.value();
+            }
+        }
+
+        int smallest = 0;
+        for (Map.Pair<String, Integer> temp : wordsSorted) {
+            if (temp.value() < largest) {
+                smallest = temp.value();
+            }
+        }
+
+        /*
+         * This queue has all the words within in the map
+         */
+
+        wordsSorted.changeToExtractionMode();
+        while (wordsSorted.size() > 0) {
+
+            Map.Pair<String, Integer> removedCount = wordsSorted.removeFirst();
+
+            String fontSize = fontSize(removedCount.value(), largest, smallest);
+            out.println("            <span style=\"cursor:default\" class=\""
+                    + fontSize + "\" title=\"count: " + removedCount.value()
+                    + "\">" + removedCount.key() + "</span>");
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        System.out.println("Enter location and name of input file: ");
+        Scanner input = new Scanner(System.in);
+        String inputFile = input.nextLine();
+
+        System.out.println("Enter name of output file: ");
+        String outputFile = input.nextLine();
+
+        input.close();
+
+        Map<String, Integer> wordCount;
+
+        try {
+            BufferedReader inputStream = new BufferedReader(
+                    new FileReader(inputFile));
+
+            wordCount = readFile(inputStream);
+
+            inputStream.close();
+
+        } catch (IOException e) {
+            System.err.println("Error opening file");
+            return;
+        }
+
+        TreeMap<String, Integer> sortedMap = sortMap(wordCount);
+
+//        System.out.println(wordCount.toString());
+//
+//        TreeMap<String, Integer> wordSorted = sortMap(wordCount);
+//
+//        System.out.println(wordSorted.toString());
+    }
+}

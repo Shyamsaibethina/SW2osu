@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="components.sequence.Sequence1L"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="components.stack.Stack3"/>
+    <fullyQualifiedTypeName name="components.stack.Stack1L"/>
+    <fullyQualifiedTypeName name="components.simplereader.SimpleReader1L"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="components.queue.QueueSecondary"/>
+    <fullyQualifiedTypeName name="components.map.Map1L"/>
+    <fullyQualifiedTypeName name="components.stack.Stack"/>
+    <fullyQualifiedTypeName name="components.naturalnumber.NaturalNumber2"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="components.queue.Queue1L"/>
+    <fullyQualifiedTypeName name="components.binarytree.BinaryTree"/>
+    <fullyQualifiedTypeName name="components.tree.Tree"/>
+    <fullyQualifiedTypeName name="components.sequence.Sequence"/>
+    <fullyQualifiedTypeName name="components.sequence.Sequence3"/>
+    <fullyQualifiedTypeName name="T"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="components.simplewriter.SimpleWriter"/>
+    <fullyQualifiedTypeName name="components.simplereader.SimpleReader"/>
+    <fullyQualifiedTypeName name="components.queue.Queue2"/>
+    <fullyQualifiedTypeName name="components.set.Set"/>
+    <fullyQualifiedTypeName name="components.set.Set1L"/>
+    <fullyQualifiedTypeName name="Statement2.StatementLabel"/>
+    <fullyQualifiedTypeName name="components.tree.Tree1"/>
+    <fullyQualifiedTypeName name="components.statement.Statement"/>
+    <fullyQualifiedTypeName name="Program1Parse1Test"/>
+    <fullyQualifiedTypeName name="components.statement.Statement1"/>
+    <fullyQualifiedTypeName name="components.map.Map"/>
+    <fullyQualifiedTypeName name="components.map.Map.Pair"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="components.queue.Queue"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

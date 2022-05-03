@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.3" sequence="4" timestamp="1642694922286" analysisTimestamp="1642694921623" release="">
+  <Project projectName="QueueOnSequence">
+    <Jar>/Users/shyamsaibethina/Downloads/QueueOnSequence/bin/Queue3.class</Jar>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Downloads/QueueOnSequence/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.1.v20211116-1657/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/shyamsaibethina/Downloads/QueueOnSequence/src</SrcDir>
+    <SrcDir>/Users/shyamsaibethina/Downloads/QueueOnSequence/test</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 20 Jan 2022 11:08:41 -0500" total_classes="1" referenced_classes="29" total_bugs="0" total_size="45" num_packages="1" java_version="15.0.2" vm_version="15.0.2+7-27" cpu_seconds="1.56" clock_seconds="0.67" peak_mbytes="577.16" alloc_mbytes="2048.00" gc_seconds="0.01">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="45">
+      <ClassStats class="Queue3" sourceFile="Queue3.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="180" invocations="2" avgMicrosecondsPerInvocation="90490" maxMicrosecondsPerInvocation="158807" standardDeviationMicrosecondsPerInvocation="68317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="107" invocations="415" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="8663" standardDeviationMicrosecondsPerInvocation="675"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="43" invocations="418" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="2038" standardDeviationMicrosecondsPerInvocation="176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="36" invocations="29" avgMicrosecondsPerInvocation="1248" maxMicrosecondsPerInvocation="15885" standardDeviationMicrosecondsPerInvocation="3063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="78" avgMicrosecondsPerInvocation="438" maxMicrosecondsPerInvocation="7339" standardDeviationMicrosecondsPerInvocation="1295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="25" invocations="29" avgMicrosecondsPerInvocation="895" maxMicrosecondsPerInvocation="5930" standardDeviationMicrosecondsPerInvocation="1449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="17" invocations="56" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="3613" standardDeviationMicrosecondsPerInvocation="684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="16" invocations="18" avgMicrosecondsPerInvocation="921" maxMicrosecondsPerInvocation="3005" standardDeviationMicrosecondsPerInvocation="884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="13" invocations="381" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="1203" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="11" invocations="29" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="6153" standardDeviationMicrosecondsPerInvocation="1124"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1642694362954" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1642694362955" release="" codeSize="42" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1642694720742" release="" codeSize="42" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1642694776265" release="" codeSize="45" numClasses="1"/>
+  </History>
+</BugCollection>

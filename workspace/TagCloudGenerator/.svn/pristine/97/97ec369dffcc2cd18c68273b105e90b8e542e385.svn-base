@@ -1,0 +1,383 @@
+import java.util.Comparator;
+
+import components.map.Map;
+import components.map.Map1L;
+import components.queue.Queue;
+import components.queue.Queue1L;
+import components.set.Set;
+import components.set.Set1L;
+import components.simplereader.SimpleReader;
+import components.simplereader.SimpleReader1L;
+import components.simplewriter.SimpleWriter;
+import components.simplewriter.SimpleWriter1L;
+
+/**
+ * Program to take in an input file of words and outputs an HTML file of the
+ * words and the amount of times each word appeared in the input file.
+ *
+ * @author Shyam Sai Bethina and Yihone Chu
+ */
+public final class TagCloudGenerator {
+
+    /**
+     * Default constructor--private to prevent instantiation.
+     */
+    private TagCloudGenerator() {
+    }
+
+    /**
+     * Sorts Integer values of Map Pairs in decreasing order.
+     */
+    private static class IntegerSort
+            implements Comparator<Map.Pair<String, Integer>> {
+        @Override
+        public int compare(Map.Pair<String, Integer> o1,
+                Map.Pair<String, Integer> o2) {
+            return o2.value().compareTo(o1.value());
+        }
+    }
+
+    /**
+     * Sorts String keys of Map Pairs in alphabetical order.
+     */
+    private static class StringSort
+            implements Comparator<Map.Pair<String, Integer>> {
+        @Override
+        public int compare(Map.Pair<String, Integer> o1,
+                Map.Pair<String, Integer> o2) {
+            return o1.key().compareTo(o2.key());
+        }
+    }
+
+    /**
+     * Gets the lines from the input file stream and returns a queue of the
+     * lines.
+     *
+     * @param in
+     *            The input file stream
+     * @return A queue of lines from the input file
+     * @ensures Returned Queue is filled with lines from the input file stream
+     *
+     */
+    public static Queue<String> getLines(SimpleReader in) {
+        //Creates an empty queue to add in lines
+        Queue<String> lines = new Queue1L<>();
+
+        /*
+         * While the input file stream is not at the end, it gets the next line
+         * within the input, and if the is not empty, it gets added to the Queue
+         */
+        while (!in.atEOS()) {
+            String line = in.nextLine();
+            if (!(line.isEmpty())) {
+                lines.enqueue(line);
+            }
+
+        }
+
+        return lines;
+    }
+
+    /**
+     * String for the list of possible separators (except for ").
+     */
+    private static final String SEPARATORS = ". ,:;'{][}|/><?!`~1234567890"
+            + "@#$%^&*()-_=+";
+
+    /**
+     * Generates the set of character separators from {@code String} (the
+     * separators) into {@code Set}.
+     *
+     * @param str
+     *            the given {@code String}
+     * @return set of characters consisting of chars in str
+     * @ensures elements = chars in str
+     *
+     **/
+    private static Set<Character> generateSetofSeparators(String str) {
+        /*
+         * Set to hold separators. Iterate through the string of separators and
+         * add each unique one to the set.
+         */
+        Set<Character> separators = new Set1L<Character>();
+        for (int i = 0; i < str.length(); i++) {
+            if (!separators.contains(str.charAt(i))) {
+                separators.add(str.charAt(i));
+            }
+        }
+        /*
+         * Due to string limitations, then add ".
+         */
+        return separators;
+    }
+
+    /**
+     * Returns the first "word" (maximal length string of characters not in
+     * {@code separators}) or "separator string" (maximal length string of
+     * characters in {@code separators}) in the given {@code text} starting at
+     * the given {@code position}. Adds only words to the Queue.
+     *
+     * @param text
+     *            the {@code String} from which to get the word or separator
+     *            string
+     * @param words
+     *            Queue to be replaced with only words from the text
+     * @requires 0 <= position < |text|
+     * @ensures <pre>
+     * The returned Queue will have words, but not words with separators
+     * </pre>
+     */
+    public static void nextWordOrSeparator(Queue<String> words, String text,
+            Set<Character> separatorSet) {
+
+        //Indexes to get the substring of words or separators
+        int firstIndex = 0;
+        int secondIndex = 0;
+        while (firstIndex < text.length()) {
+            String subString;
+            /*
+             * This boolean will be used to determine whether the string we are
+             * indexing is a word or separators
+             */
+            boolean word = false;
+
+            /*
+             * If the character at firstIndex is a separator, then subString
+             * will equal the string with only separators until the character is
+             * a letter. If the character at firstIndex is a letter, then
+             * subString will equals the string with only letter until character
+             * is a separator
+             */
+            if (separatorSet.contains(text.charAt(firstIndex))) {
+                while (secondIndex < text.length()
+                        && separatorSet.contains(text.charAt(secondIndex))) {
+                    secondIndex++;
+                }
+            } else {
+                while (secondIndex < text.length()
+                        && !separatorSet.contains(text.charAt(secondIndex))) {
+                    secondIndex++;
+                }
+                /*
+                 * Since the characters in this block don't belong to the
+                 * separate, they belong to words, which will make the word
+                 * boolean true
+                 */
+                word = true;
+            }
+
+            /*
+             * If the resulting subString is a word, this block enqueues the
+             * word to Queue words, and firstIndex will equal to secondIndex in
+             * order reset the count
+             */
+            if (word) {
+                subString = text.substring(firstIndex, secondIndex);
+                words.enqueue(subString.toLowerCase());
+            }
+
+            firstIndex = secondIndex;
+        }
+
+    }
+
+    /**
+     * Scans through the input file and adds words and their counts to a map.
+     * Words are based off of given separators.
+     *
+     * @param countMap
+     *            map that holds words and counts
+     * @param input
+     *            input file to be counted
+     * @param separators
+     *            set of characters that can separate words
+     * @replaces countMap
+     * @requires input is open
+     * @ensures <pre>every key in the map is a word from input and each key
+     *               has a value for how many times it appears in input
+     *          </pre>
+     */
+    private static void addToMap(Map<String, Integer> countMap,
+            Queue<String> input, Set<Character> separatorSet) {
+        /*
+         * Clear existing map in case it's not empty.
+         */
+        countMap.clear();
+        Queue<String> words = input.newInstance();
+
+        for (String line : input) {
+            line = line.toLowerCase();
+            nextWordOrSeparator(words, line, separatorSet);
+        }
+
+        for (String word : words) {
+            if (!separatorSet.contains(word.charAt(0))) {
+                if (!countMap.hasKey(word)) {
+                    countMap.add(word, 1);
+                } else {
+                    int newCount = countMap.value(word) + 1;
+                    countMap.remove(word);
+                    countMap.add(word, newCount);
+                }
+            }
+        }
+    }
+
+    private static String fontSize(int count) {
+        final int maxCount = 48;
+        final int minCount = 11;
+        int answer = maxCount - minCount;
+        answer *= (count - minCount);
+        answer /= (maxCount - minCount);
+        answer += minCount;
+
+        return "f" + answer;
+    }
+
+    /**
+     * Outputs the header for the index HTML file.
+     *
+     * @param out
+     *            The output file stream
+     * @param fileName
+     *            The name of the file the user desired
+     * @requires out.is_open
+     * @ensures output file has the header for the index HTML file
+     */
+    public static void outputHeader(SimpleWriter out, String fileName) {
+        /*
+         * Outputs the beginning code of the index HTML file to the output file
+         * stream
+         */
+        out.println("<html>");
+        out.println("   <head>");
+        out.println("      <title>Top 100 words in " + fileName + "</title>");
+        out.println(
+                "      <link href=\"http://web.cse.ohio-state.edu/software/2231"
+                        + "/web-sw2/assignments/projects/tag-cloud-generator/data/"
+                        + "tagcloud.css\" rel=\"stylesheet\" type=\"text/css\">");
+        out.println("      <link href=\"tagcloud.css\" rel=\"stylesheet\" "
+                + "type=\"text/css\">");
+        out.println("   </head>");
+        out.println("   <body>");
+        out.println("      <h2>Top 100 words in " + fileName + "</h2>");
+        out.println("      <hr>");
+        out.println("      <div class=\"cdiv\">");
+        out.println("         <p class=\"cbox\">");
+
+    }
+
+    /**
+     * Outputs the footer for the index HTML file.
+     *
+     * @param out
+     *            The output file stream
+     * @requires out.is_open
+     * @ensures output file has the closing braces for the index HTML file
+     */
+    public static void outputFooter(SimpleWriter out) {
+        /*
+         * Outputs the closing code of the index HTML file to the output file
+         * stream
+         */
+        out.println("         </p>");
+        out.println("      </div>");
+        out.println("   </body>");
+        out.print("</html>");
+    }
+
+    /**
+     * Outputs the words and corresponding counts to the table in the index HTML
+     * file.
+     *
+     * @param counts
+     *            The map of the words and their corresponding occurrences in
+     *            the input file.
+     * @param out
+     *            The output file stream
+     * @requires out.is_open
+     * @ensures output file has the code to output the table of words and counts
+     *          in the HTML file.
+     */
+    public static void outputCounts(Map<String, Integer> counts,
+            SimpleWriter out) {
+        /*
+         * This queue has all the words within in the map
+         */
+        for (Map.Pair<String, Integer> pair : counts) {
+            String fontSize = fontSize(pair.value());
+            out.println("            <span style=\"cursor:default\" class=\""
+                    + fontSize + "\" title=\"count: " + pair.value()
+                    + "\">a</span>");
+        }
+    }
+
+    /**
+     * Main method.
+     *
+     * @param args
+     *            the command line arguments; unused here
+     */
+    public static void main(String[] args) {
+        /*
+         * Creates input file stream for user input and output file stream to
+         * ask questions
+         */
+        SimpleReader in = new SimpleReader1L();
+        SimpleWriter out = new SimpleWriter1L();
+
+        /*
+         * Gets the input file name from user, and inputName becomes the answer
+         */
+        out.println("Enter location and name of input file: ");
+        String inputName = in.nextLine();
+
+        /*
+         * This input file stream reads the input file using the name the user
+         * inputed
+         */
+        SimpleReader inputFile = new SimpleReader1L(inputName);
+
+        /*
+         * Asks for the name of the output file name, and fileName becomes the
+         * answer
+         */
+        out.println("Enter name of output file: ");
+        String fileName = in.nextLine();
+
+        /*
+         * This output file stream creates a new file with the name the user
+         * wanted
+         */
+        SimpleWriter outFile = new SimpleWriter1L(fileName);
+
+        /*
+         * Queue lines is filled up with the lines from the input file, and
+         * inputFile stream is closed because it is not needed anymore
+         */
+        Queue<String> lines = getLines(inputFile);
+
+        /*
+         * The counts map has all the words and counts of each word
+         */
+        Map<String, Integer> counts = new Map1L<String, Integer>();
+        addToMap(counts, lines);
+
+        /*
+         * The next three lines outputs the header, the list, and the footer of
+         * the HTML file to the desire file
+         */
+        outputHeader(outFile, inputName);
+        outputCounts(counts, outFile);
+        outputFooter(outFile);
+
+        /*
+         * Closes all the input and output streams
+         */
+        inputFile.close();
+        in.close();
+        out.close();
+        outFile.close();
+    }
+
+}

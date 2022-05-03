@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.3" sequence="14" timestamp="1644335403744" analysisTimestamp="1644335403015" release="">
+  <Project projectName="BinaryTreeMethods">
+    <Jar>/Users/shyamsaibethina/Desktop/Software II/workspace/BinaryTreeMethods/bin/BinaryTreeMethods.class</Jar>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/workspace/BinaryTreeMethods/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/workspace/BinaryTreeMethods/lib/binary-tree-utility.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.1.v20211116-1657/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/BinaryTreeMethods/src</SrcDir>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/BinaryTreeMethods/test</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="7" last="11" removedByChange="true">
+    <Class classname="BinaryTreeMethods">
+      <SourceLine classname="BinaryTreeMethods" sourcefile="BinaryTreeMethods.java" sourcepath="BinaryTreeMethods.java"/>
+    </Class>
+    <Method classname="BinaryTreeMethods" name="isInTree" signature="(Lcomponents/binarytree/BinaryTree;Ljava/lang/Object;)Z" isStatic="true">
+      <SourceLine classname="BinaryTreeMethods" start="70" end="91" startBytecode="0" endBytecode="60" sourcefile="BinaryTreeMethods.java" sourcepath="BinaryTreeMethods.java"/>
+    </Method>
+    <LocalVariable name="temp" register="5" pc="90" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="BinaryTreeMethods" start="79" end="79" startBytecode="88" endBytecode="88" sourcefile="BinaryTreeMethods.java" sourcepath="BinaryTreeMethods.java"/>
+    <SourceLine classname="BinaryTreeMethods" start="79" end="79" startBytecode="88" endBytecode="88" sourcefile="BinaryTreeMethods.java" sourcepath="BinaryTreeMethods.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="temp"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 8 Feb 2022 10:50:02 -0500" total_classes="1" referenced_classes="22" total_bugs="0" total_size="61" num_packages="1" java_version="15.0.2" vm_version="15.0.2+7-27" cpu_seconds="1.62" clock_seconds="0.75" peak_mbytes="601.59" alloc_mbytes="2048.00" gc_seconds="0.03">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="61">
+      <ClassStats class="BinaryTreeMethods" sourceFile="BinaryTreeMethods.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="178" invocations="5" avgMicrosecondsPerInvocation="35747" maxMicrosecondsPerInvocation="166408" standardDeviationMicrosecondsPerInvocation="65360"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="175" invocations="2" avgMicrosecondsPerInvocation="87545" maxMicrosecondsPerInvocation="144458" standardDeviationMicrosecondsPerInvocation="56913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="79" invocations="369" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="11692" standardDeviationMicrosecondsPerInvocation="714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="30" invocations="7" avgMicrosecondsPerInvocation="4418" maxMicrosecondsPerInvocation="12750" standardDeviationMicrosecondsPerInvocation="4299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="25" invocations="7" avgMicrosecondsPerInvocation="3607" maxMicrosecondsPerInvocation="7958" standardDeviationMicrosecondsPerInvocation="3073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="21" invocations="47" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="11018" standardDeviationMicrosecondsPerInvocation="1648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="18" invocations="5" avgMicrosecondsPerInvocation="3632" maxMicrosecondsPerInvocation="12291" standardDeviationMicrosecondsPerInvocation="4568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="17" invocations="5" avgMicrosecondsPerInvocation="3434" maxMicrosecondsPerInvocation="14430" standardDeviationMicrosecondsPerInvocation="5565"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1644334586103" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1644334586104" release="" codeSize="46" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1644334603109" release="" codeSize="46" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1644334651159" release="" codeSize="48" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1644334716754" release="" codeSize="49" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1644334796089" release="" codeSize="51" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1644334933024" release="" codeSize="55" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1644335182847" release="" codeSize="56" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1644335245117" release="" codeSize="49" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1644335276542" release="" codeSize="49" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1644335365847" release="" codeSize="49" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1644335372291" release="" codeSize="60" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1644335387677" release="" codeSize="49" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1644335390950" release="" codeSize="49" numClasses="1"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="RepositorySelectionPage.lastRepository" value="svn+ssh://stdlinux.coeit.osu.edu/share/CSE/project/c2231ae18/repos"/>
+	<item key="DirectorySelectionPage.lastParent_svn+ssh://stdlinux.coeit.osu.edu/share/CSE/project/c2231ae18/repos" value=""/>
+	<item key="CommitDialog.location.x" value="140"/>
+	<item key="CommitDialog.location.y" value="36"/>
+	<item key="CommitDialog.size.x" value="1115"/>
+	<item key="CommitDialog.size.y" value="742"/>
+	<item key="CommitDialog.weights.0" value="500"/>
+	<item key="CommitDialog.weights.1" value="500"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Revision" value="59"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Date" value="145"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Author" value="116"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Comment" value="290"/>
+	<item key="UpdateDialogWithConflictHandling.location.x" value="366"/>
+	<item key="UpdateDialogWithConflictHandling.location.y" value="25"/>
+	<item key="UpdateDialogWithConflictHandling.size.x" value="586"/>
+	<item key="UpdateDialogWithConflictHandling.size.y" value="751"/>
+	<item key="HistoryTableProvider.revisions.Revision" value="101"/>
+	<item key="HistoryTableProvider.revisions.Date" value="250"/>
+	<item key="HistoryTableProvider.revisions.Author" value="200"/>
+	<item key="HistoryTableProvider.revisions.Comment" value="500"/>
+	<item key="HistoryTableProvider.revisionsBlock.Revision" value="101"/>
+	<item key="HistoryTableProvider.revisionsBlock.Date" value="250"/>
+	<item key="HistoryTableProvider.revisionsBlock.Author" value="200"/>
+	<item key="HistoryTableProvider.revisionsBlock.Comment" value="500"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Revision" value="101"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Date" value="251"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Author" value="200"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Comment" value="501"/>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="svn+ssh://stdlinux.coeit.osu.edu/share/CSE/project/c2231ae18/repos"/>
+		</list>
+	</section>
+	<section name="CommitWizard">
+		<item key="VWeight1" value="500"/>
+		<item key="VWeight2" value="500"/>
+		<item key="ShowCompare" value="false"/>
+	</section>
+</section>

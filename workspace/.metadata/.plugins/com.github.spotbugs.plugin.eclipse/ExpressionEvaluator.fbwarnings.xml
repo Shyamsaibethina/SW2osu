@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.3" sequence="1" timestamp="1648564336561" analysisTimestamp="1648564332832" release="">
+  <Project projectName="ExpressionEvaluator">
+    <Jar>/Users/shyamsaibethina/Desktop/Software II/workspace/ExpressionEvaluator/bin/ExpressionEvaluator.class</Jar>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/workspace/ExpressionEvaluator/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.1.v20211116-1657/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/ExpressionEvaluator/src</SrcDir>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/ExpressionEvaluator/test</SrcDir>
+  </Project>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="ExpressionEvaluator">
+      <SourceLine classname="ExpressionEvaluator" sourcefile="ExpressionEvaluator.java" sourcepath="ExpressionEvaluator.java"/>
+    </Class>
+    <Method classname="ExpressionEvaluator" name="valueOfDigitSeq" signature="(Ljava/lang/StringBuilder;)I" isStatic="true">
+      <SourceLine classname="ExpressionEvaluator" start="140" end="144" startBytecode="0" endBytecode="137" sourcefile="ExpressionEvaluator.java" sourcepath="ExpressionEvaluator.java"/>
+    </Method>
+    <SourceLine classname="ExpressionEvaluator" start="142" end="142" startBytecode="6" endBytecode="6" sourcefile="ExpressionEvaluator.java" sourcepath="ExpressionEvaluator.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 29 Mar 2022 10:32:11 -0400" total_classes="1" referenced_classes="18" total_bugs="1" total_size="60" num_packages="1" java_version="15.0.2" vm_version="15.0.2+7-27" cpu_seconds="10.75" clock_seconds="3.80" peak_mbytes="573.47" alloc_mbytes="2048.00" gc_seconds="0.06" priority_2="1">
+    <PackageStats package="" total_bugs="1" total_types="1" total_size="60" priority_2="1">
+      <ClassStats class="ExpressionEvaluator" sourceFile="ExpressionEvaluator.java" interface="false" size="60" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="627" invocations="2" avgMicrosecondsPerInvocation="313748" maxMicrosecondsPerInvocation="496525" standardDeviationMicrosecondsPerInvocation="182777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="459" invocations="364" avgMicrosecondsPerInvocation="1262" maxMicrosecondsPerInvocation="52656" standardDeviationMicrosecondsPerInvocation="4113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="341" invocations="7" avgMicrosecondsPerInvocation="48772" maxMicrosecondsPerInvocation="226145" standardDeviationMicrosecondsPerInvocation="73313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="286" invocations="70" avgMicrosecondsPerInvocation="4087" maxMicrosecondsPerInvocation="147856" standardDeviationMicrosecondsPerInvocation="17894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="199" invocations="7" avgMicrosecondsPerInvocation="28442" maxMicrosecondsPerInvocation="64827" standardDeviationMicrosecondsPerInvocation="18190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="154" invocations="7" avgMicrosecondsPerInvocation="22018" maxMicrosecondsPerInvocation="77789" standardDeviationMicrosecondsPerInvocation="23400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="151" invocations="1" avgMicrosecondsPerInvocation="151694" maxMicrosecondsPerInvocation="151694" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="116" invocations="7" avgMicrosecondsPerInvocation="16571" maxMicrosecondsPerInvocation="41753" standardDeviationMicrosecondsPerInvocation="16216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="107" invocations="365" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="5782" standardDeviationMicrosecondsPerInvocation="601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="99" invocations="18" avgMicrosecondsPerInvocation="5531" maxMicrosecondsPerInvocation="30320" standardDeviationMicrosecondsPerInvocation="7581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="89" invocations="7" avgMicrosecondsPerInvocation="12778" maxMicrosecondsPerInvocation="22653" standardDeviationMicrosecondsPerInvocation="7144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="87" invocations="7" avgMicrosecondsPerInvocation="12433" maxMicrosecondsPerInvocation="27638" standardDeviationMicrosecondsPerInvocation="8136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="74" invocations="329" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="9330" standardDeviationMicrosecondsPerInvocation="818"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1648564336560" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

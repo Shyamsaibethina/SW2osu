@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.3" sequence="13" timestamp="1650381049447" analysisTimestamp="1650381048133" release="">
+  <Project projectName="JavaIOExplorations">
+    <Jar>/Users/shyamsaibethina/Desktop/Software II/workspace/JavaIOExplorations/bin/FilterFileStdJava.class</Jar>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/workspace/JavaIOExplorations/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Users/shyamsaibethina/Desktop/Software II/components.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.13.2.v20211018-1956.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.1.v20211116-1657/jre/lib/jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/JavaIOExplorations/test</SrcDir>
+    <SrcDir>/Users/shyamsaibethina/Desktop/Software II/workspace/JavaIOExplorations/src</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="2">
+    <Class classname="CopyFileStdJava">
+      <SourceLine classname="CopyFileStdJava" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+    </Class>
+    <Method classname="CopyFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="CopyFileStdJava" start="33" end="57" startBytecode="0" endBytecode="381" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="60" end="61" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="CopyFileStdJava" start="33" end="33" startBytecode="11" endBytecode="11" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+    <SourceLine classname="CopyFileStdJava" start="33" end="33" startBytecode="11" endBytecode="11" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="2">
+    <Class classname="CopyFileStdJava">
+      <SourceLine classname="CopyFileStdJava" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+    </Class>
+    <Method classname="CopyFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="CopyFileStdJava" start="33" end="57" startBytecode="0" endBytecode="381" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="66" end="67" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="CopyFileStdJava" start="35" end="35" startBytecode="33" endBytecode="33" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+    <SourceLine classname="CopyFileStdJava" start="35" end="35" startBytecode="33" endBytecode="33" sourcefile="CopyFileStdJava.java" sourcepath="CopyFileStdJava.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="7" last="7" removedByChange="true">
+    <Class classname="FilterFileStdJava">
+      <SourceLine classname="FilterFileStdJava" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Class>
+    <Method classname="FilterFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="FilterFileStdJava" start="34" end="59" startBytecode="0" endBytecode="63" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Method>
+    <LocalVariable name="strings" register="3" pc="60" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="FilterFileStdJava" start="37" end="37" startBytecode="59" endBytecode="59" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    <SourceLine classname="FilterFileStdJava" start="37" end="37" startBytecode="59" endBytecode="59" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="strings"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="5" last="12" removedByChange="true">
+    <Class classname="FilterFileStdJava">
+      <SourceLine classname="FilterFileStdJava" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Class>
+    <Method classname="FilterFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="FilterFileStdJava" start="35" end="71" startBytecode="0" endBytecode="567" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="60" end="61" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+    </Method>
+    <SourceLine classname="FilterFileStdJava" start="35" end="35" startBytecode="11" endBytecode="11" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    <SourceLine classname="FilterFileStdJava" start="35" end="35" startBytecode="11" endBytecode="11" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="5" last="12" removedByChange="true">
+    <Class classname="FilterFileStdJava">
+      <SourceLine classname="FilterFileStdJava" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Class>
+    <Method classname="FilterFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="FilterFileStdJava" start="35" end="71" startBytecode="0" endBytecode="567" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="66" end="67" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+    </Method>
+    <SourceLine classname="FilterFileStdJava" start="37" end="37" startBytecode="33" endBytecode="33" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    <SourceLine classname="FilterFileStdJava" start="37" end="37" startBytecode="33" endBytecode="33" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" rank="8" abbrev="IL" category="CORRECTNESS" first="10" last="11" removedByChange="true">
+    <Class classname="FilterFileStdJava">
+      <SourceLine classname="FilterFileStdJava" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Class>
+    <Method classname="FilterFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="FilterFileStdJava" start="35" end="70" startBytecode="0" endBytecode="557" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Method>
+    <SourceLine classname="FilterFileStdJava" start="48" end="48" startBytecode="102" endBytecode="102" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    <LocalVariable name="temp" register="4" pc="102" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="FilterFileStdJava" start="46" end="46" startBytecode="78" endBytecode="78" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_LOOP" priority="1" rank="8" abbrev="IL" category="CORRECTNESS" first="8" last="9" removedByChange="true">
+    <Class classname="FilterFileStdJava">
+      <SourceLine classname="FilterFileStdJava" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Class>
+    <Method classname="FilterFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="FilterFileStdJava" start="35" end="70" startBytecode="0" endBytecode="534" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Method>
+    <SourceLine classname="FilterFileStdJava" start="49" end="49" startBytecode="104" endBytecode="104" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    <LocalVariable name="s" register="4" pc="104" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="FilterFileStdJava" start="46" end="46" startBytecode="78" endBytecode="78" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" first="8" last="9" removedByChange="true">
+    <Class classname="FilterFileStdJava">
+      <SourceLine classname="FilterFileStdJava" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Class>
+    <Method classname="FilterFileStdJava" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="FilterFileStdJava" start="35" end="70" startBytecode="0" endBytecode="534" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java"/>
+    </Method>
+    <LocalVariable name="s" register="4" pc="132" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="java.io.BufferedReader" name="readLine" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.io.BufferedReader" start="392" end="392" startBytecode="0" endBytecode="47" sourcefile="BufferedReader.java" sourcepath="java/io/BufferedReader.java"/>
+    </Method>
+    <SourceLine classname="FilterFileStdJava" start="53" end="53" startBytecode="134" endBytecode="134" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+    <SourceLine classname="FilterFileStdJava" start="53" end="53" startBytecode="134" endBytecode="134" sourcefile="FilterFileStdJava.java" sourcepath="FilterFileStdJava.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 19 Apr 2022 11:10:47 -0400" total_classes="1" referenced_classes="14" total_bugs="2" total_size="6" num_packages="1" java_version="15.0.2" vm_version="15.0.2+7-27" cpu_seconds="3.08" clock_seconds="1.34" peak_mbytes="636.59" alloc_mbytes="2048.00" gc_seconds="0.02" priority_1="2">
+    <PackageStats package="" total_bugs="2" total_types="2" total_size="6" priority_1="2">
+      <ClassStats class="FilterFileStdJava" sourceFile="FilterFileStdJava.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="365" invocations="2" avgMicrosecondsPerInvocation="182667" maxMicrosecondsPerInvocation="302562" standardDeviationMicrosecondsPerInvocation="119895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="276" invocations="340" avgMicrosecondsPerInvocation="812" maxMicrosecondsPerInvocation="28173" standardDeviationMicrosecondsPerInvocation="2501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="341" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="10911" standardDeviationMicrosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="78" invocations="57" avgMicrosecondsPerInvocation="1371" maxMicrosecondsPerInvocation="35904" standardDeviationMicrosecondsPerInvocation="5056"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="58" invocations="14" avgMicrosecondsPerInvocation="4202" maxMicrosecondsPerInvocation="24071" standardDeviationMicrosecondsPerInvocation="6757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="40" invocations="14" avgMicrosecondsPerInvocation="2870" maxMicrosecondsPerInvocation="15627" standardDeviationMicrosecondsPerInvocation="4098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="14" avgMicrosecondsPerInvocation="2768" maxMicrosecondsPerInvocation="29558" standardDeviationMicrosecondsPerInvocation="7545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="31" invocations="306" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="4171" standardDeviationMicrosecondsPerInvocation="394"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1650378768903" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1650378768906" release="" codeSize="7" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1650378805390" release="" codeSize="23" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1650378942640" release="" codeSize="7" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1650378949404" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1650379620596" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1650379702721" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1650379718180" release="" codeSize="23" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1650380437613" release="" codeSize="27" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1650380503865" release="" codeSize="28" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1650380604539" release="" codeSize="29" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1650380623630" release="" codeSize="29" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1650380694190" release="" codeSize="30" numClasses="1"/>
+  </History>
+</BugCollection>

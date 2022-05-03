@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/EmailAccounts"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/JavaIOExplorations"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/ProgramCodeGenerator"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/Tokenizer"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/ProgramAndStatement"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/StatementCountPrimitiveCalls"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/ArraySiftDown"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/SetOnBST"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/SetOnQueue"/>
+			<item value="/Users/shyamsaibethina/Desktop/Software II/workspace/NaturalNumberOnString"/>
+			<item value="/Users/shyamsaibethina/Downloads/SequenceOnStack"/>
+			<item value="/Users/shyamsaibethina/Downloads/QueueOnSequence"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>
